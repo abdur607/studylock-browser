@@ -1,0 +1,256 @@
+@import "../styles/theme.css";
+
+/* ─── Base ─── */
+:root {
+  color: var(--sl-text);
+  font-family: var(--sl-font);
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+/* ─── Page — cool blue-gray focus gradient ─── */
+.blocked-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background:
+    radial-gradient(ellipse 900px 500px at 8% 10%,  rgba(120, 162, 204, 0.12), transparent 68%),
+    radial-gradient(ellipse 700px 600px at 90% 82%, rgba(28, 43, 58, 0.06), transparent 70%),
+    var(--sl-focus-bg-gradient);
+}
+
+/* ─── Focus card ─── */
+.blocked-panel {
+  width: min(680px, 100%);
+  background: var(--sl-surface);
+  border: 1px solid var(--sl-border);
+  border-radius: var(--sl-r-lg);
+  padding: 36px 40px;
+  box-shadow: var(--sl-shadow-lg);
+}
+
+/* ─── Eyebrow ─── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sl-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sl-text-muted);
+  padding: 4px 10px;
+  border-radius: var(--sl-r-pill);
+  border: 1px solid var(--sl-border-strong);
+  background: var(--sl-bg-warm);
+  margin-bottom: 14px;
+}
+
+/* ─── Heading ─── */
+h1 {
+  margin: 0 0 12px;
+  font-family: var(--sl-font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--sl-text);
+}
+
+/* ─── Blocked domain highlight ─── */
+.highlight-domain {
+  display: inline;
+  font-style: italic;
+  color: var(--sl-secondary);
+  font-family: var(--sl-font-serif);
+}
+
+/* ─── Goal line ─── */
+.goal-line {
+  margin: 0 0 12px;
+  color: var(--sl-text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ─── Intro paragraph ─── */
+p {
+  margin: 0 0 14px;
+  color: var(--sl-text-muted);
+  line-height: 1.6;
+}
+
+/* ─── Meta info cards ─── */
+.meta {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.meta div {
+  padding: 10px 14px;
+  background: var(--sl-bg-warm);
+  border: 1px solid var(--sl-border);
+  border-radius: var(--sl-r-sm);
+  font-size: 13px;
+  color: var(--sl-text);
+}
+
+.meta div strong {
+  font-family: var(--sl-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sl-text-muted);
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* ─── Strict notice ─── */
+.strict-notice {
+  background: var(--sl-danger-soft);
+  border: 1px solid var(--sl-danger-border);
+  border-radius: var(--sl-r-sm);
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--sl-danger-text);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+/* ─── Reason input ─── */
+.reason-label {
+  display: grid;
+  gap: 6px;
+  font-family: var(--sl-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--sl-text-muted);
+  margin-bottom: 14px;
+}
+
+.reason-hint {
+  font-size: 12px;
+  color: var(--sl-danger);
+  font-weight: 400;
+  font-family: var(--sl-font);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid var(--sl-border-strong);
+  border-radius: var(--sl-r-sm);
+  padding: 10px 12px;
+  resize: vertical;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 14px;
+  color: var(--sl-text);
+  background: var(--sl-bg-warm);
+  outline: none;
+  transition: border-color var(--sl-ease), box-shadow var(--sl-ease);
+}
+
+textarea:focus {
+  border-color: var(--sl-secondary);
+  box-shadow: 0 0 0 3px var(--sl-secondary-soft);
+}
+
+textarea:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--sl-bg);
+}
+
+/* ─── Checkbox ─── */
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  line-height: 1.5;
+  color: var(--sl-text);
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--sl-primary);
+}
+
+/* ─── Actions ─── */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+/* ─── Buttons ─── */
+button {
+  border: 0;
+  border-radius: var(--sl-r-sm);
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  background: var(--sl-primary);
+  color: white;
+  transition: opacity var(--sl-ease), transform var(--sl-ease), box-shadow var(--sl-ease);
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.85;
+  transform: translateY(-1px);
+  box-shadow: var(--sl-shadow-pop);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  transform: none;
+  box-shadow: none;
+}
+
+button.secondary {
+  background: var(--sl-surface);
+  color: var(--sl-text);
+  border: 1px solid var(--sl-border-strong);
+  box-shadow: var(--sl-shadow-xs);
+}
+
+button.secondary:hover:not(:disabled) {
+  background: var(--sl-bg);
+  border-color: var(--sl-primary);
+  color: var(--sl-primary);
+  opacity: 1;
+  box-shadow: none;
+}
+
+button.danger {
+  background: var(--sl-danger-grad);
+  color: white;
+}
