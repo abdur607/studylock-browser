@@ -83,4 +83,4 @@ If this policy changes in a future version, the "Last updated" date above will b
 
 ## Contact
 
-Questions about this privacy policy? Contact: [your-email@example.com]
+Questions about this privacy policy? Contact: [absaqib2005@gmail.com]
